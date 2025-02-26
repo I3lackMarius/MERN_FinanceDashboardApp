@@ -5,11 +5,11 @@ export const api = createApi({
     baseUrl: "import.meta.env.VITE_BASE_URL",
   }),
   reducerPath: "main",
-  tagTypes: ["Kpi"],
+  tagTypes: ["Kpis"],
   endpoints: (build) => ({
     getKpis: build.query<void, void>({
-      query: () => "kpi/kpis",
-      providesTags: ["Kpi"],
+      query: () => "kpi/kpis/",
+      providesTags: ["Kpis"],
     }),
   }),
 });
