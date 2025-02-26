@@ -7,6 +7,7 @@ const gridTemplateLargeScreens = `
   "a b c"
   "a b c"
   "a b c"
+  "a b f"
   "d e f"
   "d e f"
   "d h i"
@@ -48,7 +49,7 @@ const gridTemplateSmallScreens = `
 `;
 
 const Dashboard = () => {
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1200px");
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1200px)");
   return (
     <Box
       width="100%"
@@ -63,8 +64,8 @@ const Dashboard = () => {
               gridTemplateAreas: gridTemplateLargeScreens,
             }
           : {
-              gridTemplateColumns: "1fr",
-              gridTemplateRows: "80px",
+              gridAutoColumns: "1fr",
+              gridAutoRows: "80px",
               gridTemplateAreas: gridTemplateSmallScreens,
             }
       }
