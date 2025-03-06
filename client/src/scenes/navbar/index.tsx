@@ -21,7 +21,7 @@ const Navbar = (props: Props) => {
 
       {/* RIGHT SIDE */}
       <FlexBetween gap="2rem">
-        <Box sx={{ "&:hover": { copredictionslor: palette.primary[100] } }}>
+        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
             to="/"
             onClick={() => setSelected("dashboard")}
