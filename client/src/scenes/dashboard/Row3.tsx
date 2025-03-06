@@ -19,8 +19,9 @@ const Row3 = () => {
   const { data: productData } = useGetProductsQuery();
   const { data: transactionData } = useGetTransactionsQuery();
   console.log(transactionData);
+
   const pieChartData = useMemo(() => {
-    if (kpiData) {
+    if (kpiData && kpiData.length > 0 && kpiData[0].expensesByCategory) {
       const totalExpenses = kpiData[0].totalExpenses;
       return Object.entries(kpiData[0].expensesByCategory).map(
         ([key, value]) => {
@@ -37,6 +38,7 @@ const Row3 = () => {
         }
       );
     }
+    return [];
   }, [kpiData]);
 
   const productColumns = [
